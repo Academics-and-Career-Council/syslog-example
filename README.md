@@ -28,7 +28,7 @@ To send a request, make use of the code given in the example.
         }
         
 The severity levels should be one of the following:
-0.    code        Name of Log         string to be filled (ensure correct case and spelling)
+1.     code        Name of Log         string to be filled (ensure correct case and spelling)
 1.  	  0         Emergency	            emerg
 2.  	  1         Alert	                alert
 3.  	  2         Critical	            crit		

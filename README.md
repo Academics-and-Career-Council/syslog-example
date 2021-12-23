@@ -14,7 +14,6 @@ To send a request, make use of the code given in the example.
               SOME GENERAL THINGS TO KEEP NOTE OF:
         1. The structure(JSON) of the data sent should be kept as such:
         type Syslog struct {
-          ID			int			`bson:"id_for_ref"`       (This is used in sending process and need not be filled)
           ServiceName string		`bson:"service_name"`       (Fill in the name of service, eg, Kratos, Xenon, etc) ***** Has to be filled always!!! *****
           StatusCode	int			`bson:"status_code"`        (self explainatory)
           Severity	string		`bson:"severity"`          (Look at codes below, or refer to "syslog") 

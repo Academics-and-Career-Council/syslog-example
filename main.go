@@ -53,7 +53,6 @@ func main() {
 	fmt.Println(q)
 
 	type Syslog struct {
-		ID			int			`bson:"id_for_ref"`
 		ServiceName string		`bson:"service_name"`
 		StatusCode	int			`bson:"status_code"`
 		Severity	string		`bson:"severity"`
@@ -66,7 +65,6 @@ func main() {
 		CreatedAt 	time.Time   `bson:"createdAt,omitempty"`
 	}//Object to be sent to syslog, should follow the same pattern
 	log := Syslog{
-		1,
 		"xenon",
 		409,
 		"error", 
@@ -104,7 +102,6 @@ func main() {
 	//**** Sends multiple data periodically ****
 	s := gocron.NewScheduler(time.UTC)
 	s.Every(5).Seconds().Do(func(){
-		log.ID = log.ID + 1
 		log.CreatedAt = time.Now()
 		log.Timestamp = time.Now()
 		data, _ := json.Marshal(log)
